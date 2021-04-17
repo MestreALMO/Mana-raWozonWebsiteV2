@@ -1,14 +1,16 @@
 import React from "react";
 import Homepage from "./Pages/Homepage";
-import GlobalCss from "./styles/global";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { ThemeProvider } from "@material-ui/core";
+
+import Theme from "./components/Colors";
 
 function App() {
   return (
-    <>
-      <GlobalCss />
-
+    <ThemeProvider theme={Theme}>
+      <CssBaseline />
       <Homepage />
-    </>
+    </ThemeProvider>
   );
 }
 
